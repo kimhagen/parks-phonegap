@@ -56,8 +56,19 @@ var greenIcon = L.icon({
 
 var userLocation;
 
+function touchHandlerDummy(e)
+{
+    e.preventDefault();
+    return false;
+}
+
 
 $(function () {
+  
+  
+  document.addEventListener("touchstart", touchHandlerDummy, false);
+  document.addEventListener("touchmove", touchHandlerDummy, false);
+  document.addEventListener("touchend", touchHandlerDummy, false);
 	
 
 	var albuquerque = [35.0844, -106.6506];
